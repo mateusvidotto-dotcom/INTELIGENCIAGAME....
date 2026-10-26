@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090e19">
+  <meta name="description" content="Mind Forge Omega — jogo de treinamento intelectual, lógica, aprendizagem, pensamento crítico e estudo bíblico.">
+  <title>Mind Forge Omega ∞ — A Forja do Intelecto</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+  <link rel="stylesheet" href="styles/learning-tools.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" data-nav="home" aria-label="Mind Forge Omega, início">
+        <span class="brand-mark" aria-hidden="true">∞</span>
+        <span class="brand-copy"><strong>MIND FORGE</strong><small>OMEGA <span>∞</span></small></span>
+      </a>
+      <div class="sidebar-label">CENTRAL</div>
+      <nav class="nav-list">
+        <button class="nav-item is-active" data-nav="home"><span class="nav-icon">⌂</span> Visão geral</button>
+        <button class="nav-item" data-nav="modules"><span class="nav-icon">◈</span> Laboratórios</button>
+        <button class="nav-item" data-nav="campaign"><span class="nav-icon">⚑</span> Campanha</button>
+        <button class="nav-item" data-nav="review"><span class="nav-icon">↻</span> Revisão inteligente <span class="nav-count" id="review-nav-count">0</span></button>
+        <button class="nav-item" data-nav="progress"><span class="nav-icon">▥</span> Evolução</button>
+        <button class="nav-item" data-nav="obmep"><span class="nav-icon">∑</span> Biblioteca OBMEP</button>
+        <button class="nav-item" data-nav="study"><span class="nav-icon">⌘</span> Estudo inteligente</button>
+        <button class="nav-item" data-nav="plan"><span class="nav-icon">▦</span> Plano de treino</button>
+        <button class="nav-item" data-nav="games"><span class="nav-icon">♟</span> Jogos intelectuais</button>
+      </nav>
+      <div class="sidebar-label sidebar-label-spaced">SEU TREINO</div>
+      <div class="sidebar-focus" id="sidebar-focus">
+        <span class="focus-dot"></span>
+        <div><strong>Pronto para começar</strong><small>Uma questão por vez.</small></div>
+      </div>
+      <div class="sidebar-bottom">
+        <button class="nav-item" data-nav="settings"><span class="nav-icon">⚙</span> Configurações</button>
+        <div class="sidebar-note"><span class="note-icon">✦</span><p>Curiosidade. Precisão. Progresso.</p></div>
+        <div class="sidebar-version">EDIÇÃO LOCAL · v1.2.1</div>
+      </div>
+    </aside>
+
+    <div class="main-column">
+      <header class="topbar">
+        <button class="mobile-menu icon-button" id="mobile-menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        <div class="breadcrumbs"><span>FORJA DO INTELECTO</span><span class="crumb-sep">/</span><strong id="current-crumb">VISÃO GERAL</strong></div>
+        <div class="topbar-right">
+          <div class="streak-pill" title="Dias de treino registrados"><span>✦</span><strong id="streak-count">0</strong><small>dias</small></div>
+          <div class="avatar" aria-hidden="true">M</div>
+        </div>
+      </header>
+
+      <main id="main-content" class="main-content" tabindex="-1">
+        <section class="view is-visible" id="view-home" aria-labelledby="home-title">
+          <div class="hero-panel">
+            <div class="hero-copy">
+              <div class="eyebrow"><span class="eyebrow-line"></span> CENTRO DE TREINAMENTO INTELECTUAL</div>
+              <h1 id="home-title">Forje uma mente<br><span>mais precisa.</span></h1>
+              <p>Desafios reais. Estratégias melhores. Conhecimento que você consegue aplicar.</p>
+              <div class="hero-actions">
+                <button class="button button-primary" id="start-adaptive">Iniciar treinamento <span aria-hidden="true">↗</span></button>
+                <button class="button button-ghost" id="start-random">Desafio surpresa <span aria-hidden="true">⤢</span></button>
+                <button class="button button-ghost" id="start-elite">Desafio de elite <span aria-hidden="true">✦</span></button>
+              </div>
+              <div class="hero-meta"><span class="pulse-dot"></span> <span>SEM CRONÔMETRO POR PADRÃO</span><span class="meta-divider">·</span><span>PROGRESSO SALVO NESTE NAVEGADOR</span></div>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+              <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+              <div class="core-glow"></div><div class="core-symbol">∞</div>
+              <span class="orbit-node node-a">LOGIC</span><span class="orbit-node node-b">INSIGHT</span><span class="orbit-node node-c">MEMORY</span>
+              <div class="art-coordinate">MF–01<br>COGNITIVE SYSTEMS</div>
+            </div>
+          </div>
+
+          <div class="section-heading section-heading-row">
+            <div><div class="eyebrow">SEU PAINEL</div><h2>Progresso em foco</h2></div>
+            <button class="text-button" data-nav="progress">Ver relatório completo <span aria-hidden="true">→</span></button>
+          </div>
+          <div class="stats-grid">
+            <article class="stat-card"><div class="stat-top"><span>EXPERIÊNCIA</span><span class="stat-symbol">✧</span></div><div class="stat-value"><strong id="home-xp">0</strong><small>XP</small></div><div class="stat-sub" id="home-level">Nível 1 · Iniciação</div><div class="progress-track"><span id="home-xp-bar" style="width:0%"></span></div></article>
+            <article class="stat-card"><div class="stat-top"><span>PRECISÃO OBSERVADA</span><span class="stat-symbol">◎</span></div><div class="stat-value"><strong id="home-accuracy">—</strong><small>%</small></div><div class="stat-sub" id="home-answered">Ainda sem tentativas</div><div class="mini-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+            <article class="stat-card"><div class="stat-top"><span>QUESTÕES ENFRENTADAS</span><span class="stat-symbol">◇</span></div><div class="stat-value"><strong id="home-completed">0</strong><small>questões</small></div><div class="stat-sub" id="home-modules">Explore seu primeiro laboratório</div><div class="stat-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+          </div>
+
+          <div class="section-heading section-heading-row modules-heading">
+            <div><div class="eyebrow">ESCOLHA SEU CAMINHO</div><h2>Laboratórios</h2><p>Treine habilidades diferentes, uma missão por vez.</p></div>
+            <button class="text-button" data-nav="modules">Todos os módulos <span aria-hidden="true">→</span></button>
+          </div>
+          <div class="module-grid" id="home-module-grid"></div>
+
+          <div class="bottom-grid">
+            <article class="panel campaign-panel">
+              <div class="panel-kicker"><span class="kicker-icon">⚑</span> CAMPANHA PRINCIPAL</div>
+              <h3>A Expedição Omega</h3><p>Una lógica, observação e pensamento crítico em uma sequência de missões interligadas.</p>
+              <div class="campaign-progress-row"><span id="campaign-progress-label">0 de 5 etapas</span><span id="campaign-progress-percent">0%</span></div>
+              <div class="progress-track progress-track-wide"><span id="campaign-progress-bar" style="width:0%"></span></div>
+              <button class="button button-secondary" data-nav="campaign">Acessar campanha <span aria-hidden="true">→</span></button>
+            </article>
+            <article class="panel review-panel">
+              <div class="panel-kicker"><span class="kicker-icon">↻</span> APRENDIZAGEM ATIVA</div>
+              <h3>O que merece revisão?</h3><p>Questões erradas ou difíceis retornam para você recuperar o raciocínio, não apenas reconhecer a resposta.</p>
+              <div class="review-summary"><div><strong id="review-due-count">0</strong><span>para revisar</span></div><div class="review-summary-line"></div><div><strong id="review-mastered-count">0</strong><span>dominadas</span></div></div>
+              <button class="button button-secondary" id="home-review-button">Iniciar revisão <span aria-hidden="true">→</span></button>
+            </article>
+          </div>
+          <footer class="page-footer"><span>MIND FORGE OMEGA ∞</span><span>Treinamento de habilidades específicas — não é teste clínico ou de QI.</span></footer>
+        </section>
+
+        <section class="view" id="view-modules" aria-labelledby="modules-title">
+          <div class="page-heading"><div class="eyebrow">MAPA DE CONHECIMENTO</div><h1 id="modules-title">Laboratórios de treino</h1><p>Escolha uma habilidade. O histórico ajuda a ajustar os próximos desafios.</p></div>
+          <div class="filter-row" role="group" aria-label="Filtrar laboratórios"><button class="filter-chip is-selected" data-filter="all">Todos</button><button class="filter-chip" data-filter="cognitive">Cognição</button><button class="filter-chip" data-filter="academic">Conhecimento</button><button class="filter-chip" data-filter="reflection">Reflexão</button></div>
+          <div class="module-grid module-grid-full" id="all-module-grid"></div>
+          <footer class="page-footer"><span>ESCOLHA UM MÓDULO</span><span>Os níveis são categorias internas do jogo, não medidas científicas de inteligência.</span></footer>
+        </section>
+
+        <section class="view" id="view-game" aria-labelledby="game-title">
+          <div class="game-topline"><button class="text-button" id="back-to-modules">← Voltar aos laboratórios</button><span class="session-mode-tag" id="session-mode-tag">TREINO LIVRE</span></div>
+          <div class="game-header"><div class="game-module-mark" id="game-module-mark">◈</div><div class="game-header-copy"><div class="eyebrow" id="game-kicker">LABORATÓRIO</div><h1 id="game-title">Desafio</h1><p id="game-subtitle">Resolva no seu ritmo. Pense antes de responder.</p></div><div class="game-progress-number"><strong id="question-number">01</strong><span id="question-total">/ 05</span></div></div>
+          <div class="session-progress-track"><span id="session-progress-bar" style="width:20%"></span></div>
+          <div class="game-layout">
+            <section class="question-card" id="question-card" aria-live="polite"></section>
+            <aside class="game-aside">
+              <article class="aside-card aside-tip"><div class="aside-icon">✧</div><div class="eyebrow">ESTRATÉGIA</div><h3>Entenda antes de concluir</h3><p>Identifique as condições, separe fatos de suposições e confira se sua resposta respeita todas as pistas.</p></article>
+              <article class="aside-card"><div class="aside-stat"><span>SESSÃO</span><strong id="aside-session-count">1 / 5</strong></div><div class="aside-stat"><span>ACERTOS</span><strong id="aside-correct-count">0</strong></div><div class="aside-stat"><span>PISTAS USADAS</span><strong id="aside-hints-count">0</strong></div></article>
+              <button class="button button-ghost button-full" id="quit-session">Encerrar sessão</button>
+            </aside>
+          </div>
+          <footer class="page-footer"><span>SEM PRESSA — FOCO NA QUALIDADE DO RACIOCÍNIO</span><span id="session-save-state">Progresso salvo ao responder.</span></footer>
+        </section>
+
+        <section class="view" id="view-campaign" aria-labelledby="campaign-title">
+          <div class="page-heading"><div class="eyebrow">CAMPANHA · CINCO ETAPAS</div><h1 id="campaign-title">A Expedição Omega</h1><p>Uma investigação que exige múltiplas habilidades. Cada etapa concluída fica registrada localmente.</p></div>
+          <div class="campaign-hero panel"><div class="campaign-emblem" aria-hidden="true">Ω</div><div><div class="eyebrow">MISSÃO PRINCIPAL</div><h2>O arquivo perdido</h2><p>Um arquivo científico foi protegido por cinco camadas. Para reconstruí-lo, você precisará detectar padrões, interpretar evidências e avaliar conclusões.</p><button class="button button-primary" id="start-campaign">Iniciar / continuar expedição <span aria-hidden="true">↗</span></button></div></div>
+          <div class="section-heading"><div class="eyebrow">ROTEIRO OPERACIONAL</div><h2>Etapas da expedição</h2></div>
+          <div class="mission-list" id="mission-list"></div>
+          <footer class="page-footer"><span>MISSÕES COM PROGRESSÃO</span><span>O jogo não pune dias sem atividade.</span></footer>
+        </section>
+
+        <section class="view" id="view-review" aria-labelledby="review-title">
+          <div class="page-heading"><div class="eyebrow">RECUPERAÇÃO ATIVA</div><h1 id="review-title">Revisão inteligente</h1><p>Retome questões que você errou, pediu ajuda ou ainda não demonstrou dominar.</p></div>
+          <div class="review-overview-grid"><article class="panel"><div class="eyebrow">NA FILA DE REVISÃO</div><strong class="big-number" id="review-page-due">0</strong><p>Itens priorizados pelo histórico disponível.</p></article><article class="panel"><div class="eyebrow">REVISÕES CONCLUÍDAS</div><strong class="big-number" id="review-page-done">0</strong><p>Questões respondidas no modo revisão.</p></article><article class="panel"><div class="eyebrow">CONCEITOS DOMINADOS</div><strong class="big-number" id="review-page-mastered">0</strong><p>Itens acertados novamente em revisões.</p></article></div>
+          <div class="panel review-callout"><div><h3>Pronto para recuperar o que aprendeu?</h3><p>Uma resposta correta após uma pausa é um sinal mais útil de retenção do que simplesmente reler a explicação.</p></div><button class="button button-primary" id="start-review-page">Começar revisão <span aria-hidden="true">→</span></button></div>
+          <div class="section-heading"><div class="eyebrow">PRÓXIMAS REVISÕES</div><h2>Fila atual</h2></div><div id="review-queue-list" class="review-queue-list"></div>
+        </section>
+
+        <section class="view" id="view-progress" aria-labelledby="progress-title">
+          <div class="page-heading"><div class="eyebrow">RELATÓRIO PESSOAL</div><h1 id="progress-title">Evolução observada</h1><p>Indicadores calculados a partir de ações reais registradas nesta instalação.</p></div>
+          <div class="progress-main-grid"><article class="panel overall-panel"><div class="eyebrow">NÍVEL INTERNO DO JOGO</div><div class="overall-level"><strong id="progress-level-number">1</strong><div><h2 id="progress-level-name">Iniciação</h2><p id="progress-next-level">Próximo nível a 100 XP</p></div></div><div class="progress-track progress-track-wide"><span id="progress-xp-bar" style="width:0%"></span></div><div class="level-foot"><span id="progress-total-xp">0 XP no total</span><span id="progress-level-percent">0% até o próximo nível</span></div></article><article class="panel"><div class="eyebrow">BALANÇO GERAL</div><div class="summary-metric"><span>Taxa de acerto</span><strong id="progress-accuracy">—</strong></div><div class="summary-metric"><span>Primeira tentativa correta sem pista</span><strong id="progress-first-try">—</strong></div><div class="summary-metric"><span>Taxa de uso de pistas</span><strong id="progress-hint-rate">—</strong></div><div class="summary-metric"><span>Confiança média / acerto</span><strong id="progress-confidence-calibration">—</strong></div><div class="summary-metric"><span>Sessões concluídas</span><strong id="progress-sessions">0</strong></div></article></div>
+          <div class="section-heading"><div class="eyebrow">HABILIDADES PRATICADAS</div><h2>Desempenho por laboratório</h2></div><div class="panel skill-breakdown" id="skill-breakdown"></div>
+          <div class="section-heading"><div class="eyebrow">HISTÓRICO</div><h2>Atividades recentes</h2></div><div class="panel history-panel" id="history-panel"></div>
+          <div class="panel export-panel"><div><div class="eyebrow">PORTABILIDADE</div><h3>Seus dados, sob seu controle</h3><p>Exporte um backup do progresso em JSON para guardar ou importar em outro navegador. Os dados não são enviados a um servidor.</p></div><div class="export-actions"><button class="button button-secondary" id="export-progress">Exportar progresso ↓</button><label class="button button-ghost file-button" for="import-progress-file">Importar backup ↑</label><input id="import-progress-file" type="file" accept="application/json,.json" hidden></div></div>
+        </section>
+
+        <section class="view" id="view-obmep" aria-labelledby="obmep-title">
+          <div class="page-heading"><div class="eyebrow">MATEMÁTICA OLÍMPICA · QUESTÕES DE ORIGEM IDENTIFICADA</div><h1 id="obmep-title">Biblioteca OBMEP</h1><p>Pesquise as páginas fornecidas, estude a figura original e registre uma resolução justificada. A extração de texto pode conter erros; a imagem é a fonte primária.</p></div>
+          <div class="hub-metrics" id="obmep-metrics"></div>
+          <div class="panel obmep-notice"><strong>Integridade da fonte</strong><p>Foram disponibilizados 14 arquivos de missão. A missão 9 não está no conjunto enviado. As folhas não incluem um gabarito comentado completo; somente soluções revisadas individualmente são identificadas como tal. Não inventamos as respostas ausentes.</p></div>
+          <div class="panel obmep-mock-panel"><div><div class="eyebrow">SESSÃO ESTRUTURADA</div><h2>Simulado OBMEP · 4 questões</h2><p>Uma seleção curta de problemas para resolver sem cronômetro obrigatório. Registre compreensão, estratégia, desenvolvimento e verificação; as respostas abertas não recebem uma nota automática.</p></div><button type="button" class="button button-primary" data-obmep-mock>Iniciar simulado ↗</button></div>
+          <div class="panel obmep-filter-panel"><label class="input-label" for="obmep-search">Pesquisar no enunciado e nos metadados</label><input class="answer-input" id="obmep-search" type="search" placeholder="Ex.: geometria, função, números, probabilidade…" autocomplete="off"><div class="hub-filter-grid"><label class="input-label">Missão<select id="obmep-mission-filter" class="select-control"><option value="all">Todas as missões disponíveis</option></select></label><label class="input-label">Tema<select id="obmep-topic-filter" class="select-control"><option value="all">Todos os temas</option></select></label><label class="input-label">Transcrição<select id="obmep-transcript-filter" class="select-control"><option value="all">Todas</option><option value="yes">Texto extraído</option><option value="no">Imagem como fonte principal</option></select></label></div><div class="obmep-result-line"><span id="obmep-results-count">56 questões</span><span>Originais preservados como imagens</span></div></div>
+          <div class="obmep-question-grid" id="obmep-question-grid" aria-live="polite"></div>
+        </section>
+
+        <section class="view" id="view-study" aria-labelledby="study-title">
+          <div class="page-heading"><div class="eyebrow">MÉTODOS APLICÁVEIS</div><h1 id="study-title">Estudo inteligente</h1><p>Tutoriais curtos com procedimentos concretos, exemplos e uma ação para experimentar hoje.</p></div>
+          <div class="study-intro panel"><div><div class="eyebrow">PRINCÍPIO CENTRAL</div><h2>Aprender exige recuperar, aplicar e corrigir.</h2><p>Sentir familiaridade ao reler não prova domínio. Tente recordar sem olhar, explique com suas palavras, resolva algo novo e retome o conteúdo depois de um intervalo.</p></div><div class="study-stats" id="study-completion-stat">0 de 8 aplicados</div></div>
+          <div id="study-tutorial-list" class="study-tutorial-list"></div>
+        </section>
+
+        <section class="view" id="view-plan" aria-labelledby="plan-title">
+          <div class="page-heading"><div class="eyebrow">PERCURSO PERSONALIZADO</div><h1 id="plan-title">Plano de treino</h1><p>Monte uma rotina realista pela disponibilidade e pelas prioridades. O plano orienta a prática; não promete resultados intelectuais garantidos.</p></div>
+          <form id="plan-form" class="panel plan-form">
+            <div class="hub-filter-grid"><label class="input-label">Tempo por dia<select id="plan-minutes" class="select-control"><option value="10">10 minutos</option><option value="20" selected>20 minutos</option><option value="30">30 minutos</option><option value="45">45 minutos</option><option value="60">60 minutos</option></select></label><label class="input-label">Horizonte<select id="plan-horizon" class="select-control"><option value="7">7 dias</option><option value="30" selected>30 dias</option><option value="90">90 dias</option></select></label><label class="input-label">Experiência atual<select id="plan-level" class="select-control"><option value="beginner">Estou construindo a base</option><option value="intermediate" selected>Já resolvo problemas intermediários</option><option value="advanced">Busco desafios avançados</option></select></label></div>
+            <fieldset class="plan-priorities"><legend>Escolha até três prioridades</legend><label><input type="checkbox" name="plan-focus" value="obmep" checked> Matemática / OBMEP</label><label><input type="checkbox" name="plan-focus" value="logic" checked> Lógica e estratégia</label><label><input type="checkbox" name="plan-focus" value="memory"> Memória e atenção</label><label><input type="checkbox" name="plan-focus" value="critical"> Pensamento crítico</label><label><input type="checkbox" name="plan-focus" value="chess"> Xadrez e jogos</label><label><input type="checkbox" name="plan-focus" value="study"> Métodos de estudo</label></fieldset>
+            <button class="button button-primary" type="submit">Gerar / atualizar meu plano ↗</button>
+          </form>
+          <div id="plan-output" class="plan-output" aria-live="polite"></div>
+        </section>
+
+        <section class="view" id="view-games" aria-labelledby="games-title">
+          <div class="page-heading"><div class="eyebrow">JOGOS COM REGRAS EXPLÍCITAS</div><h1 id="games-title">Jogos intelectuais</h1><p>Sudoku, xadrez e problemas de planejamento. Cada jogo trabalha estratégias específicas; pontuações não medem inteligência geral.</p></div>
+          <div class="game-tabs" role="tablist" aria-label="Selecionar jogo"><button class="filter-chip is-selected" data-game-tab="sudoku" role="tab" aria-selected="true">Sudoku</button><button class="filter-chip" data-game-tab="chess" role="tab" aria-selected="false">Xadrez</button><button class="filter-chip" data-game-tab="hanoi" role="tab" aria-selected="false">Torres de Hanói</button><button class="filter-chip" data-game-tab="verbal" role="tab" aria-selected="false">Raciocínio verbal</button></div>
+          <div id="game-lab-content" class="game-lab-content"></div>
+        </section>
+
+        <section class="view" id="view-settings" aria-labelledby="settings-title">
+          <div class="page-heading"><div class="eyebrow">PREFERÊNCIAS PESSOAIS</div><h1 id="settings-title">Configurações</h1><p>Ajuste o ritmo e a aparência do treinamento.</p></div>
+          <div class="settings-layout"><div class="settings-group"><div class="eyebrow">EXPERIÊNCIA DE JOGO</div><article class="setting-row"><div><strong>Modo sem cronômetro</strong><p>Prioriza reflexão e precisão, sem pressão por velocidade.</p></div><label class="switch"><input type="checkbox" id="setting-no-timer" checked><span class="switch-slider"></span></label></article><article class="setting-row"><div><strong>Mostrar confiança antes da resposta</strong><p>Registre de 1 a 5 quanto você confia na sua solução.</p></div><label class="switch"><input type="checkbox" id="setting-confidence" checked><span class="switch-slider"></span></label></article><article class="setting-row"><div><strong>Reduzir animações</strong><p>Limita movimentos decorativos da interface.</p></div><label class="switch"><input type="checkbox" id="setting-reduced-motion"><span class="switch-slider"></span></label></article><article class="setting-row"><div><strong>Efeitos sonoros</strong><p>Esta versão utiliza feedback visual, sem áudio obrigatório.</p></div><label class="switch"><input type="checkbox" id="setting-sound" disabled><span class="switch-slider"></span></label></article></div>
+          <div class="settings-group"><div class="eyebrow">DIFICULDADE</div><div class="setting-row setting-row-block"><div><strong>Dificuldade preferida</strong><p>O modo adaptativo pode ajustar a recomendação conforme os resultados; aqui você define o ponto de partida.</p></div><select id="setting-difficulty" class="select-control"><option value="1">1 · Iniciação</option><option value="2">2 · Fundamentos</option><option value="3">3 · Intermediário</option><option value="4">4 · Avançado</option><option value="5">5 · Especialista</option><option value="6">6 · Mestre</option><option value="7">7 · Elite</option><option value="8">8 · Omega</option><option value="9">9 · Extraordinário</option></select></div><div class="setting-row setting-row-block"><div><strong>Quantidade de questões por sessão</strong><p>Uma sessão é curta por padrão, mas você decide sua extensão.</p></div><select id="setting-session-length" class="select-control"><option value="3">3 questões</option><option value="5">5 questões</option><option value="8">8 questões</option><option value="10">10 questões</option></select></div></div>
+          <div class="settings-group danger-group"><div class="eyebrow">GERENCIAMENTO DE DADOS</div><div class="setting-row setting-row-block"><div><strong>Redefinir progresso local</strong><p>Apaga XP, estatísticas, histórico, revisões e configurações. Exporte um backup antes, se desejar.</p></div><button class="button button-danger" id="reset-progress">Redefinir progresso</button></div></div><div id="settings-feedback" class="inline-feedback" aria-live="polite"></div></div>
+          <footer class="page-footer"><span>PRIVACIDADE LOCAL</span><span>Limpar os dados do navegador também remove este progresso.</span></footer>
+        </section>
+      </main>
+    </div>
+  </div>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <div class="modal-backdrop" id="modal-backdrop" hidden><div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-icon">!</div><h2 id="modal-title">Confirmar ação</h2><p id="modal-message">Esta ação não pode ser desfeita.</p><div class="modal-actions"><button class="button button-ghost" id="modal-cancel">Cancelar</button><button class="button button-danger" id="modal-confirm">Confirmar</button></div></div></div>
+  <script src="scripts/core/storage.js"></script>
+  <script src="scripts/core/progression.js"></script>
+  <script src="scripts/core/adaptive-engine.js"></script>
+  <script src="scripts/core/review-system.js"></script>
+  <script src="scripts/core/module-registry.js"></script>
+  <script src="scripts/core/obmep-workflow.js"></script>
+  <script src="scripts/modules/logic.js"></script>
+  <script src="scripts/modules/attention.js"></script>
+  <script src="scripts/modules/memory.js"></script>
+  <script src="scripts/modules/creativity.js"></script>
+  <script src="scripts/modules/mathematics.js"></script>
+  <script src="scripts/modules/critical-thinking.js"></script>
+  <script src="scripts/modules/bible.js"></script>
+  <script src="scripts/modules/science.js"></script>
+  <script src="scripts/modules/language.js"></script>
+  <script src="scripts/modules/strategy.js"></script>
+  <script src="scripts/modules/interdisciplinary.js"></script>
+  <script src="scripts/modules/metacognition.js"></script>
+  <script src="data/obmep/questions.js"></script>
+  <script src="scripts/modules/obmep.js"></script>
+  <script src="scripts/games/sudoku-engine.js"></script>
+  <script src="scripts/core/quality-overrides.js"></script>
+  <script src="scripts/tests/self-tests.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/extensions/learning-hub.js"></script>
+</body>
+</html>
